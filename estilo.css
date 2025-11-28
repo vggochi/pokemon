@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Verdana", sans-serif;
+    background: url("img/pokemon-gengar.gif") no-repeat center center fixed;
+
+    background-size: cover;
+    color: #333;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(2px);
+    z-index: -1;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive; /* estilo retrô gamer */
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Orbitron', sans-serif; /* estilo futurista */
+  font-size: 2rem;
+  color: #ffcc00;
+  text-align: center;
+}
+
+
+.site-header {
+  background: #1a1a1a;   /* fundo escuro */
+  padding: 40px 0;
+  text-align: center;    /* centraliza o título */
+}
+
+/* Título brilhante */
+.titulo-brilhante {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center; /* garante centralização */
+  text-shadow: 
+    0 0 5px #c77dff,
+    0 0 10px #9d4edd,
+    0 0 20px #7b2cbf,
+    0 0 40px #5a189a;
+  animation: brilho 2s infinite alternate;
+}
+
+@keyframes brilho {
+  from {
+    text-shadow: 
+      0 0 5px #9d4edd,
+      0 0 10px #7b2cbf,
+      0 0 20px #5a189a,
+      0 0 40px #c77dff;
+  }
+  to {
+    text-shadow: 
+      0 0 10px #e0aaff,
+      0 0 20px #c77dff,
+      0 0 30px #9d4edd,
+      0 0 50px #7b2cbf;
+  }
+}
+
+
+header h1 {
+    font-size: 2.5rem;
+    color: #000000;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 8px;
+}
+
+.pokemon-banner {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.pokemon-banner h2 {
+    margin-top: 20px;
+    font-size: 2.6rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 
+        2px 2px 0px #000000,
+        4px 4px 8px rgba(0,0,0,0.4);
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.links-container ul {
+    list-style: none;
+    width: 500px;
+}
+
+.links-container li {
+    margin: 25px 0;
+}
+
+.links-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 80px;
+    padding: 0 20px;
+
+    background-color: #d9b0ff;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 12px;
+    transition: 0.3s;
+    font-weight: bold;
+    font-size: 1.3rem;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+}
+
+.links-container a:hover {
+    background-color: #aa58ee;
+    transform: scale(1.05);
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(0, 0, 0);
+    margin-top: 40px;
+    border-radius: 10px 10px 0 0;
+}
+
+.gif-canto {
+  position: fixed;
+  bottom: 0;       /* agora ficam no rodapé */
+  width: 100px;
+  z-index: 999;
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+/* canto inferior esquerdo */
+.inferior-esquerda {
+  left: 0;
+}
+
+/* canto inferior direito */
+.inferior-direita {
+  right: 0;
+  transform: scaleX(-1); /* espelha o esqueleto */
+}
+
+/* animação suave */
+@keyframes flutuar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}

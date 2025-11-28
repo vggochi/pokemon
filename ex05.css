@@ -1,0 +1,13 @@
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 16px;
+    height: 400px;
+}
+
+.Gengar {
+    align-self: flex-end;
+}
